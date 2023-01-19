@@ -50,9 +50,7 @@ app.post("/upload",upload.single("presentImage"),async (req,res)=>{
 
 app.get("/uploaddetails",async (req,res)=>{
   try{
-    res.status(200).json({
-      status:"success"
-    })
+
     const postdatas=await Upload.find();
     res.status(200).json(postdatas)
   }
