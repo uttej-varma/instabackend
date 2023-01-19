@@ -73,4 +73,4 @@ app.get("/upload",async (req,res)=>{
 
 
 
-app.listen(5000,()=>{console.log("server is up")})
+app.listen(process.env.PORT || 5000,()=>{console.log("server is up")})
