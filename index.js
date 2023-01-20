@@ -5,7 +5,8 @@ const cors=require("cors");
 const app=express();
 const connect=require("./connection/connection");
 const Upload=require("./models/Upload");
-const multer  = require('multer')
+const multer  = require('multer');
+const port=process.env.PORT || 5000
 connect();
 app.use(cors());
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -74,4 +75,4 @@ app.get("/upload",async (req,res)=>{
 
 
 
-app.listen(process.env.PORT || 5000,()=>{console.log("server is up")})
+app.listen(port,()=>{console.log("server is up")})
